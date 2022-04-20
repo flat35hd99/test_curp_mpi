@@ -48,7 +48,7 @@ Run 40 parallel processes using MPI(`intel_parallelstudio/2018update2`), then ea
 
 "r" mean "Read", "w" mean "Write", and "rw" mean "Read and Write.
 
-The most effective dominant IO is reading trajectory. Interestingly, although file size is significantly different between trajectory and flux data(~ x8), the difference of them on results is small.
+The most effectively dominant IO is reading trajectory. Interestingly, although file size is significantly different between trajectory and flux data(~ x8), the difference of them on results is small.
 
 ### Discussion
 

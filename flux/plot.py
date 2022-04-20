@@ -24,6 +24,7 @@ def main():
     modes = ["r", "w", "rw"]
     _, ax = plt.subplots()
     ax.grid(which="major", axis="y", alpha=0.8)
+    ax.set_ylabel("elaps (second)")
 
     for mode, second_list in [
         (mode, load_time(f"results/t_{mode}_RAM.dat")) for mode in modes
