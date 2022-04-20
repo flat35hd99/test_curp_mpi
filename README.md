@@ -26,6 +26,14 @@ We already know that it is not matter at FLOW. This is unique problem at IMS bec
   - `t_w_RAM`
   - 9440218 to 9440221. 4 jobs + 9440258. Totally 5 jobs were submitted.
 
+Disks are User directory instead of `/work` directory. See below table of data size
+
+|data type  |size   |
+|-----------|-------|
+|coordinates| 6.8 GB|
+|velocities | 6.8 GB|
+|flux(output)|840 MB|
+
 All test was performed at ccnn node. Each job use only one node. See below about the machine spec
 
 - Xeon Gold 6148
@@ -36,4 +44,13 @@ Run 40 parallel processes using MPI(`intel_parallelstudio/2018update2`), then ea
 
 ### Results
 
+![](flux/results/barplot.png)
 
+"r" mean "Read", "w" mean "Write", and "rw" mean "Read and Write.
+
+The most effective dominant IO is reading trajectory. Interestingly, although file size is significantly different between trajectory and flux data(~ x8), the difference of them on results is small.
+
+### Discussion
+
+- Let's test other super computers.
+- Use RAM disk on IMS !
